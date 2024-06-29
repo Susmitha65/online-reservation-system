@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Reservation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        form {
+            background-color: white;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+        form h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Reservation System</h1>
+    </header>
+    <main>
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="reservationForm">
+            <h2>Reservation</h2>
+            <label for="trainNumber">Train Number:</label>
+            <input type="text" id="trainNumber" name="trainNumber" required>
+            <label for="trainName">Train Name:</label>
+            <input type="text" id="trainName" name="trainName" required>
+            <label for="classType">Class Type:</label>
+            <input type="text" id="classType" name="classType" required>
+            <label for="dateOfJourney">Date of Journey:</label>
+            <input type="date" id="dateOfJourney" name="dateOfJourney" required>
+            <label for="fromPlace">From:</label>
+            <input type="text" id="fromPlace" name="fromPlace" required>
+            <label for="toDestination">To:</label>
+            <input type="text" id="toDestination" name="toDestination" required>
+            <button type="submit">Reserve</button>
+        </form>
+
+        <form id="cancellationForm">
+            <h2>Cancellation</h2>
+            <label for="pnrNumber">PNR Number:</label>
+            <input type="text" id="pnrNumber" name="pnrNumber" required>
+            <button type="submit">Cancel</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Login form submitted');
+            // Add your login form submission logic here
+        });
+
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Reservation form submitted');
+            // Add your reservation form submission logic here
+        });
+
+        document.getElementById('cancellationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Cancellation form submitted');
+            // Add your cancellation form submission logic here
+        });
+    </script>
+</body>
+</html>
